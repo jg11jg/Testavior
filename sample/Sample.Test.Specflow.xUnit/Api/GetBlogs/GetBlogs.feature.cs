@@ -10,62 +10,46 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace SpecFlow.GeneratedTests.Mvc.GetBlogs
+namespace SpecFlow.GeneratedTests.Api.GetBlogs
 {
     using TechTalk.SpecFlow;
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class GetBlogsFeature
+    public partial class GetBlogsFeature : Xunit.IClassFixture<GetBlogsFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-        private Microsoft.VisualStudio.TestTools.UnitTesting.TestContext _testContext;
+        private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
 #line 1 "GetBlogs.feature"
 #line hidden
         
-        public virtual Microsoft.VisualStudio.TestTools.UnitTesting.TestContext TestContext
+        public GetBlogsFeature(GetBlogsFeature.FixtureData fixtureData, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
-            get
-            {
-                return this._testContext;
-            }
-            set
-            {
-                this._testContext = value;
-            }
+            this._testOutputHelper = testOutputHelper;
+            this.TestInitialize();
         }
         
-        [Microsoft.VisualStudio.TestTools.UnitTesting.ClassInitializeAttribute()]
-        public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
+        public static void FeatureSetup()
         {
-            testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
+            testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Get blogs", "\tIn order to list blogs\r\n\tI want to be told a list of blogs", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
-        [Microsoft.VisualStudio.TestTools.UnitTesting.ClassCleanupAttribute()]
         public static void FeatureTearDown()
         {
             testRunner.OnFeatureEnd();
             testRunner = null;
         }
         
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute()]
         public virtual void TestInitialize()
         {
-            if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "Get blogs")))
-            {
-                global::SpecFlow.GeneratedTests.Mvc.GetBlogs.GetBlogsFeature.FeatureSetup(null);
-            }
         }
         
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCleanupAttribute()]
         public virtual void ScenarioTearDown()
         {
             testRunner.OnScenarioEnd();
@@ -74,7 +58,7 @@ namespace SpecFlow.GeneratedTests.Mvc.GetBlogs
         public virtual void ScenarioSetup(TechTalk.SpecFlow.ScenarioInfo scenarioInfo)
         {
             testRunner.OnScenarioStart(scenarioInfo);
-            testRunner.ScenarioContext.ScenarioContainer.RegisterInstanceAs<Microsoft.VisualStudio.TestTools.UnitTesting.TestContext>(TestContext);
+            testRunner.ScenarioContext.ScenarioContainer.RegisterInstanceAs<Xunit.Abstractions.ITestOutputHelper>(_testOutputHelper);
         }
         
         public virtual void ScenarioCleanup()
@@ -90,42 +74,63 @@ namespace SpecFlow.GeneratedTests.Mvc.GetBlogs
 #line hidden
         }
         
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Get blogs")]
-        public virtual void Specflow_Mvc_GetBlogsShouldBeOk()
+        void System.IDisposable.Dispose()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Specflow - Mvc - Get blogs should be ok", ((string[])(null)));
+            this.ScenarioTearDown();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Specflow - Api - Get blogs should be ok")]
+        [Xunit.TraitAttribute("FeatureTitle", "Get blogs")]
+        [Xunit.TraitAttribute("Description", "Specflow - Api - Get blogs should be ok")]
+        public virtual void Specflow_Api_GetBlogsShouldBeOk()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Specflow - Api - Get blogs should be ok", ((string[])(null)));
 #line 8
 this.ScenarioSetup(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Url"});
-            table3.AddRow(new string[] {
+            table1.AddRow(new string[] {
                         "http://blog1.io"});
-            table3.AddRow(new string[] {
+            table1.AddRow(new string[] {
                         "http://blog2.io"});
-            table3.AddRow(new string[] {
+            table1.AddRow(new string[] {
                         "http://blog3.io"});
 #line 9
- testRunner.Given("the following blogs", ((string)(null)), table3, "Given ");
+ testRunner.Given("the following blogs", ((string)(null)), table1, "Given ");
 #line 14
- testRunner.When("I get the list of blogs from Web", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I get the list of blogs from Api", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "Url"});
-            table4.AddRow(new string[] {
+            table2.AddRow(new string[] {
                         "http://blog1.io"});
-            table4.AddRow(new string[] {
+            table2.AddRow(new string[] {
                         "http://blog2.io"});
-            table4.AddRow(new string[] {
+            table2.AddRow(new string[] {
                         "http://blog3.io"});
 #line 15
- testRunner.Then("the result must be the following model", ((string)(null)), table4, "Then ");
+ testRunner.Then("the result must be the following list", ((string)(null)), table2, "Then ");
 #line hidden
             this.ScenarioCleanup();
+        }
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.2.0.0")]
+        [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        public class FixtureData : System.IDisposable
+        {
+            
+            public FixtureData()
+            {
+                GetBlogsFeature.FeatureSetup();
+            }
+            
+            void System.IDisposable.Dispose()
+            {
+                GetBlogsFeature.FeatureTearDown();
+            }
         }
     }
 }
